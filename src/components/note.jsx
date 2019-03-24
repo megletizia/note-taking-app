@@ -11,7 +11,16 @@ class Note extends Component {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <button onClick={this.props.onEdit}>Edit</button>
+          <button
+            onClick={this.props.onEdit}
+            type="button"
+            className="btn btn-primary"
+            data-toggle="modal"
+            data-target="#editModal"
+          >
+            Edit
+          </button>
+
           <button onClick={() => this.props.onDelete(this.props.note.id)}>
             Delete
           </button>

@@ -15,13 +15,11 @@ class App extends Component {
     let notes = this.state.notes;
     notes.push({ id: currentId });
     this.setState({ notes, currentId });
-    console.log(currentId);
   };
 
   handleDeleteCard = cardId => {
     let notes = this.state.notes.filter(n => n.id !== cardId);
     this.setState({ notes });
-    console.log("delete");
   };
   handleEditCard = () => {
     console.log("edit");
