@@ -7,7 +7,12 @@ class Notes extends Component {
     return (
       <div className="row">
         {notes.map(note => (
-          <Note />
+          <Note
+            note={note}
+            key={notes.id}
+            onEdit={this.props.onEdit}
+            onDelete={this.props.onDelete}
+          />
         ))}
       </div>
     );

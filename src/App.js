@@ -6,14 +6,25 @@ import Notes from "./components/notes";
 
 class App extends Component {
   state = {
-    notes: [{ id: 1, value: 4 }]
+    currentId: 0,
+    notes: [{ id: 0 }]
   };
 
   handleAddNote = () => {
+    let currentId = this.state.currentId + 1;
     let notes = this.state.notes;
-    notes.push({ id: 5, value: 4 });
+    notes.push({ id: currentId });
+    this.setState({ notes, currentId });
+    console.log(currentId);
+  };
+
+  handleDeleteCard = cardId => {
+    let notes = this.state.notes.filter(n => n.id !== cardId);
     this.setState({ notes });
-    console.log("handleAddNote");
+    console.log("delete");
+  };
+  handleEditCard = () => {
+    console.log("edit");
   };
 
   render() {
@@ -21,7 +32,11 @@ class App extends Component {
       <React.Fragment>
         <NavBar onAdd={this.handleAddNote} />
         <main className="container">
-          <Notes notes={this.state.notes} />
+          <Notes
+            notes={this.state.notes}
+            onEdit={this.handleEditCard}
+            onDelete={this.handleDeleteCard}
+          />
         </main>
         <div className="App">
           <header className="App-header">
