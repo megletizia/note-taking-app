@@ -16,14 +16,14 @@ class EditNote extends Component {
     return (
       <>
         <Button variant="primary" onClick={this.handleShow}>
-          Launch demo modal
+          Edit
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>Note Body</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.handleClose}>
               Close
