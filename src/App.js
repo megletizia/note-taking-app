@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Notes from "./Notes";
-import AddNote from "./AddNote";
+import Notes from "./Components/Notes.jsx";
+import AddNote from "./Components/AddNote.jsx";
 
 class App extends Component {
   state = {
@@ -25,8 +25,8 @@ class App extends Component {
       <div className="note-app container">
         <h1 className="center blue-text">Note Taking Application</h1>
         <a href="https://github.com/megletizia/note-taking-app">Github Link</a>
-        <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
         <AddNote addNote={this.addNote} />
+        <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
       </div>
     );
   }
