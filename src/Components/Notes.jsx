@@ -5,21 +5,23 @@ const Notes = ({ notes, deleteNote }) => {
     notes.map(note => {
       return (
         <div className="collection-item" key={note.id}>
-          <span
-            onClick={() => {
-              deleteNote(note.id);
-            }}
-          >
-            {note.content}
-          </span>
-          <button
-            className="deleteButton"
-            onClick={() => {
-              deleteNote(note.id);
-            }}
-          >
-            X
-          </button>
+          {note.content}
+          <div class="buttons">
+            <button
+              onClick={() => {
+                deleteNote(note.id);
+              }}
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => {
+                deleteNote(note.id);
+              }}
+            >
+              X
+            </button>
+          </div>
         </div>
       );
     })
