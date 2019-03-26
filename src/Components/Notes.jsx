@@ -1,6 +1,6 @@
 import React from "react";
 
-const Notes = ({ notes, deleteNote }) => {
+const Notes = ({ notes, deleteNote, editNote }) => {
   const noteList = notes.length ? (
     notes.map(note => {
       return (
@@ -9,7 +9,7 @@ const Notes = ({ notes, deleteNote }) => {
           <div className="buttons">
             <button
               onClick={() => {
-                deleteNote(note.id);
+                editNote(note.id);
               }}
             >
               Edit

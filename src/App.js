@@ -15,6 +15,9 @@ class App extends Component {
       notes
     });
   };
+  editNote = id => {
+    console.log("editNote");
+  };
   addNote = note => {
     note.id = Math.random();
     let notes = [...this.state.notes, note];
@@ -32,7 +35,11 @@ class App extends Component {
           <h4>Github Link</h4>
         </a>
         <AddNote addNote={this.addNote} />
-        <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
+        <Notes
+          notes={this.state.notes}
+          deleteNote={this.deleteNote}
+          editNote={this.editNote}
+        />
       </div>
     );
   }
