@@ -26,7 +26,7 @@ const Notes = ({ notes, deleteNote }) => {
       );
     })
   ) : (
-    <p className="center">No notes left- create one above!</p>
+    <p className="center white-text">No notes listed</p>
   );
   return <div className="notes collection">{noteList}</div>;
 };

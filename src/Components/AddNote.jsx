@@ -18,10 +18,10 @@ class AddNote extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <h4 className="white-text">Type your new note below: </h4>
+        <form className="add-note" onSubmit={this.handleSubmit}>
           <input
             type="text"
+            placeholder="Enter your Note text here"
             className="input-text"
             onChange={this.handleChange}
             value={this.state.content}

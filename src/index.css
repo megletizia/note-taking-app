@@ -18,3 +18,15 @@ code {
 .input-text {
   color: white;
 }
+
+.add-note {
+  padding-top: 4em;
+}
+
+.cw {
+  text-align: center;
+  color: white;
+}
+.title {
+  padding: 1em;
+}

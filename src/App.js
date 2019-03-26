@@ -23,12 +23,13 @@ class App extends Component {
   render() {
     return (
       <div className="note-app container">
-        <h1 className="center white-text">Note Taking Application</h1>
+        <h1 className="cw title">Note Taking Application</h1>
+        <h4 className="cw ">By Meghan Letizia</h4>
         <a
+          className="center"
           href="https://github.com/megletizia/note-taking-app"
-          className="gitLink"
         >
-          <h4 className="white-text">Github Link</h4>
+          <h4>Github Link</h4>
         </a>
         <AddNote addNote={this.addNote} />
         <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
