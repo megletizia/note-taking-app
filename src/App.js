@@ -1,56 +1,33 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import NavBar from "./components/navbar";
-import Notes from "./components/notes";
+import Notes from "./Notes";
+import AddNote from "./AddNote";
 
 class App extends Component {
   state = {
-    currentId: 0,
-    notes: [{ id: 0 }]
+    notes: [{ id: 1, content: "Example Note- click me to delete me!" }]
   };
-
-  handleAddNote = () => {
-    let currentId = this.state.currentId + 1;
-    let notes = this.state.notes;
-    notes.push({ id: currentId });
-    this.setState({ notes, currentId });
+  deleteNote = id => {
+    // Filters out the notes that were clicked on
+    const notes = this.state.notes.filter(note => {
+      return note.id !== id;
+    });
+    this.setState({
+      notes
+    });
   };
-
-  handleDeleteCard = cardId => {
-    let notes = this.state.notes.filter(n => n.id !== cardId);
+  addNote = note => {
+    note.id = Math.random();
+    let notes = [...this.state.notes, note];
     this.setState({ notes });
   };
-  handleEditCard = () => {
-    console.log("edit");
-  };
-
   render() {
     return (
-      <React.Fragment>
-        <NavBar onAdd={this.handleAddNote} />
-        <main className="container">
-          <Notes
-            notes={this.state.notes}
-            onEdit={this.handleEditCard}
-            onDelete={this.handleDeleteCard}
-          />
-        </main>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>Note Taking Application by Meghan Letizia</p>
-            <a
-              className="App-link"
-              href="https://github.com/megletizia/note-taking-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github Link
-            </a>
-          </header>
-        </div>
-      </React.Fragment>
+      <div className="note-app container">
+        <h1 className="center blue-text">Note Taking Application</h1>
+        <a href="https://github.com/megletizia/note-taking-app">Github Link</a>
+        <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
+        <AddNote addNote={this.addNote} />
+      </div>
     );
   }
 }
