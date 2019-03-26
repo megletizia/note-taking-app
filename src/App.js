@@ -16,6 +16,10 @@ class App extends Component {
     });
   };
   editNote = id => {
+    const noteToEdit = this.state.notes.filter(note => {
+      note.id = id;
+      console.log(noteToEdit);
+    });
     console.log("editNote");
   };
   addNote = note => {

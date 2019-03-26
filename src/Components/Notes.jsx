@@ -5,7 +5,7 @@ const Notes = ({ notes, deleteNote, editNote }) => {
     notes.map(note => {
       return (
         <div className="collection-item" key={note.id}>
-          {note.content}
+          <p contenteditable="true">{note.content}</p>
           <div className="buttons">
             <button
               onClick={() => {
