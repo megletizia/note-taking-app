@@ -12,11 +12,19 @@ const Notes = ({ notes, deleteNote }) => {
           >
             {note.content}
           </span>
+          <button
+            className="deleteButton"
+            onClick={() => {
+              deleteNote(note.id);
+            }}
+          >
+            X
+          </button>
         </div>
       );
     })
   ) : (
-    <p className="center">No notes left- create one below!</p>
+    <p className="center">No notes left- create one above!</p>
   );
   return <div className="notes collection">{noteList}</div>;
 };
