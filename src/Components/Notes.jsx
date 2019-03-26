@@ -6,7 +6,7 @@ const Notes = ({ notes, deleteNote }) => {
       return (
         <div className="collection-item" key={note.id}>
           {note.content}
-          <div class="buttons">
+          <div className="buttons">
             <button
               onClick={() => {
                 deleteNote(note.id);
