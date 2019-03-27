@@ -17,9 +17,11 @@ class AddNote extends Component {
   };
   render() {
     return (
-      <div>
-        <button onClick={this.handleSubmit}>Add Note Button</button>
-        <form onSubmit={this.handleSubmit}>
+      <div class="row">
+        <a className="col-sm-1" onClick={this.handleSubmit}>
+          <i class="fa fa-plus-circle add-button" />
+        </a>
+        <form className="col-sm-11" onSubmit={this.handleSubmit}>
           <input
             type="text"
             placeholder="Enter your Note text here"

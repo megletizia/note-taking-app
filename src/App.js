@@ -24,6 +24,12 @@ class App extends Component {
     return (
       <div className="container">
         <h1 className="cw title">Note Taking Application</h1>
+        <p className="white-text">
+          This application will allow users to create, read, update and delete
+          notes. You can start by adding a note by typing in the note ahead of
+          time on the line below and pressing the enter key or pressing the add
+          icon.
+        </p>
         <h4 className="cw ">By Meghan Letizia</h4>
         <a
           className="center"
