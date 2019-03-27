@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+/*
+  This component is for adding notes. There are 2 ways
+   of doing it. Either through the form where you type
+  your note and then press the enter key or by using the
+  icon to the left of the form and you can go in and edit 
+  it inside.
+*/
 
 class AddNote extends Component {
   state = {

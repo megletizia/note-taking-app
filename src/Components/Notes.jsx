@@ -1,5 +1,11 @@
 import React from "react";
 
+/*  This component is to output the list of notes that come through.
+    It will take the notes and as long as there are notes available
+    it will map through them and output them below. If there isn't 
+    any notes available, it will show a paragraph saying so. 
+*/
+
 const Notes = ({ notes, deleteNote }) => {
   const noteList = notes.length ? (
     notes.map(note => {
