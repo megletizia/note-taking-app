@@ -6,6 +6,9 @@ body {
 .notes {
   margin: 10px;
 }
+h4 {
+  padding-left: 0px !important;
+}
 
 .buttons {
   font-family: tahoma;
