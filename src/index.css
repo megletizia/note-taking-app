@@ -39,11 +39,6 @@ body {
   -moz-transform: rotate(-6deg);
 }
 
-.post-it-text {
-  margin: 1em;
-  float: left;
-}
-
 /* This gives the post it notes some rotation */
 .post-it:nth-child(3n) {
   -o-transform: rotate(-3deg);

@@ -5,6 +5,7 @@ const Notes = ({ notes, deleteNote }) => {
     notes.map(note => {
       return (
         <div
+          contenteditable="true"
           className="card post-it col-sm-6 col-lg-3 collection-item"
           key={note.id}
         >
@@ -19,9 +20,7 @@ const Notes = ({ notes, deleteNote }) => {
             >
               <span aria-hidden="true">&times;</span>
             </button>
-            <p contenteditable="true" className="post-it-text">
-              {note.content}
-            </p>
+            {note.content}
           </div>
         </div>
       );
