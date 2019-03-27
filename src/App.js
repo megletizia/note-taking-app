@@ -28,20 +28,22 @@ class App extends Component {
     return (
       // Front page of application when it is first opened
       <div className="container">
-        <h1 className="cw">Note Taking Application</h1>
-        <p className="card intro">
+        <h1 className="cw row">Note Taking Application</h1>
+        <div className="row">
+          <h4 className="white-text col-sm-5">By Meghan Letizia</h4>
+          <a
+            className="col-sm-7"
+            href="https://github.com/megletizia/note-taking-app"
+          >
+            <h4>Github Link</h4>
+          </a>
+        </div>
+        <p className="card intro row">
           This application will allow users to create, read, update and delete
           notes. You can start by adding a note by typing in the note ahead of
           time on the line below and pressing the enter key or pressing the add
           icon.
         </p>
-        <h4 className="cw ">By Meghan Letizia</h4>
-        <a
-          className="center"
-          href="https://github.com/megletizia/note-taking-app"
-        >
-          <h4>Github Link</h4>
-        </a>
         <AddNote addNote={this.addNote} />
         <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
       </div>
