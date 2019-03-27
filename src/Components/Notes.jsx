@@ -4,7 +4,10 @@ const Notes = ({ notes, deleteNote }) => {
   const noteList = notes.length ? (
     notes.map(note => {
       return (
-        <div className="card col-sm-6 col-lg-3 collection-item" key={note.id}>
+        <div
+          className="card post-it col-sm-6 col-lg-3 collection-item"
+          key={note.id}
+        >
           <div className="buttons">
             <button
               type="button"
@@ -16,15 +19,17 @@ const Notes = ({ notes, deleteNote }) => {
             >
               <span aria-hidden="true">&times;</span>
             </button>
-            <p contenteditable="true">{note.content}</p>
+            <p contenteditable="true" className="post-it-text">
+              {note.content}
+            </p>
           </div>
         </div>
       );
     })
   ) : (
-    <p className="center white-text">No notes listed</p>
+    <p />
   );
-  return <div className="notes collection row">{noteList}</div>;
+  return <div className="notes row">{noteList}</div>;
 };
 
 export default Notes;

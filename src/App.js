@@ -22,7 +22,7 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="note-app container">
+      <div className="container">
         <h1 className="cw title">Note Taking Application</h1>
         <h4 className="cw ">By Meghan Letizia</h4>
         <a

@@ -3,6 +3,9 @@ body {
   padding: 0;
   background-image: url("./images/background2.png");
 }
+.notes {
+  margin: 10px;
+}
 
 .buttons {
   float: right;
@@ -22,4 +25,30 @@ body {
 }
 .title {
   padding: 1em;
+}
+
+.post-it {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 10em;
+  width: 10em;
+  padding: 1em;
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+}
+
+.post-it-text {
+  margin: 1em;
+  float: left;
+}
+
+/* This gives the post it notes some rotation */
+.post-it:nth-child(3n) {
+  -o-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  position: relative;
+  top: -5px;
 }
