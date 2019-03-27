@@ -15,13 +15,6 @@ class App extends Component {
       notes
     });
   };
-  editNote = id => {
-    const noteToEdit = this.state.notes.filter(note => {
-      note.id = id;
-      console.log(noteToEdit);
-    });
-    console.log("editNote");
-  };
   addNote = note => {
     note.id = Math.random();
     let notes = [...this.state.notes, note];

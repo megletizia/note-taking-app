@@ -1,26 +1,22 @@
 import React from "react";
 
-const Notes = ({ notes, deleteNote, editNote }) => {
+const Notes = ({ notes, deleteNote }) => {
   const noteList = notes.length ? (
     notes.map(note => {
       return (
         <div className="card col-sm-6 col-lg-3 collection-item" key={note.id}>
-          <p contenteditable="true">{note.content}</p>
           <div className="buttons">
             <button
-              onClick={() => {
-                editNote(note.id);
-              }}
-            >
-              Edit
-            </button>
-            <button
+              type="button"
+              class="close"
+              aria-label="Close"
               onClick={() => {
                 deleteNote(note.id);
               }}
             >
-              X
+              <span aria-hidden="true">&times;</span>
             </button>
+            <p contenteditable="true">{note.content}</p>
           </div>
         </div>
       );
