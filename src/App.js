@@ -32,7 +32,7 @@ class App extends Component {
         <div className="row">
           <h4 className="white-text col-sm-5">By Meghan Letizia</h4>
           <a
-            className="col-sm-7"
+            className="col-sm-7 github"
             href="https://github.com/megletizia/note-taking-app"
           >
             <h4>Github Link</h4>
