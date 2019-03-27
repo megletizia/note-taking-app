@@ -25,6 +25,7 @@ class AddNote extends Component {
             className="input-text"
             onChange={this.handleChange}
             value={this.state.content}
+            required
           />
         </form>
       </div>
