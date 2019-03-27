@@ -18,7 +18,8 @@ class AddNote extends Component {
   render() {
     return (
       <div>
-        <form className="add-note" onSubmit={this.handleSubmit}>
+        <button onClick={this.handleSubmit}>Add Note Button</button>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
             placeholder="Enter your Note text here"

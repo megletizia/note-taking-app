@@ -9,6 +9,15 @@ body {
 
 .buttons {
   float: right;
+  line-height: 12px;
+  width: 18px;
+  font-size: 8pt;
+  font-family: tahoma;
+  margin-top: 1px;
+  margin-right: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .input-text {
@@ -31,9 +40,9 @@ body {
   text-decoration: none;
   color: #000;
   display: block;
-  height: 10em;
+  min-height: 10em;
   width: 10em;
-  padding: 1em;
+  padding-top: 1em;
   -webkit-transform: rotate(-6deg);
   -o-transform: rotate(-6deg);
   -moz-transform: rotate(-6deg);
@@ -44,4 +53,13 @@ body {
   -o-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
   -moz-transform: rotate(-3deg);
+}
+
+.post-it-text {
+  float: left;
+}
+
+/* This ensures that the text content is clickable within the card */
+.note-content {
+  height: 100%;
 }

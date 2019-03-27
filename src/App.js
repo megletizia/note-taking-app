@@ -32,11 +32,7 @@ class App extends Component {
           <h4>Github Link</h4>
         </a>
         <AddNote addNote={this.addNote} />
-        <Notes
-          notes={this.state.notes}
-          deleteNote={this.deleteNote}
-          editNote={this.editNote}
-        />
+        <Notes notes={this.state.notes} deleteNote={this.deleteNote} />
       </div>
     );
   }
